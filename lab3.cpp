@@ -21,6 +21,10 @@ using namespace std;
 	strcpy(str1, str2);
 	
 }
+void  myStrCat(char* str1, char* str2){
+	strcpy(str1, str2);
+	
+}
 int main(){
 
 	char str1[100]="Hello";
@@ -28,5 +32,6 @@ int main(){
 	
 	myStrCmp(str1, str2);
 	myStrCpy(str1, str2);
+	myStrCat(str1, str2);
 	cout << str1;
 }
