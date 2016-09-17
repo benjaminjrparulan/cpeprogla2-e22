@@ -16,6 +16,7 @@ void newLine();
 
 int main(){
     Student stud;
+    double sum = 0;
     cout << "Enter student records: \n";
     cout << "ID: ";
     cin >> stud.id;
@@ -26,7 +27,8 @@ int main(){
     cin.getline(stud.name.lastName, 29);
     for(int i=0; i<3; i++){
             cout << "Grade "<< i << ": ";
-            cin >> stud.grade[i];        
+            cin >> stud.grade[i];
+			sum += stud.grade[i];        
     }
     
     cout << "\n\n";
@@ -34,6 +36,7 @@ int main(){
     cout << "ID: " << stud.id << endl;
     cout << "First Name: " << stud.name.firstName << endl;
     cout << "Last Name: " << stud.name.lastName << endl;
+    cout << "Grade Average" << sum/3 <<endl;
     for(int i=0; i<3; i++){
             cout << "Grade "<< i << ": " << stud.grade[i] << endl;        
     }
@@ -42,6 +45,6 @@ int main(){
     return 0;   
 }
 void newLine(){
-     char s;
-     do{cin.get(s);}while(s!='\n');     
+    char s;
+    do{cin.get(s);}while(s!='\n');     
 }
